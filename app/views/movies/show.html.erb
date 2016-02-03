@@ -1,0 +1,11 @@
+<h1><%= @movie.title %></h1>
+
+<p><%= image_tag @movie.image.url %></p>
+
+<p>Year of release: <%= @movie.year %></p>
+
+<p>
+  <%= link_to "Back to Genre", genre_path(@movie.genre) %> |
+  <%= link_to "Edit Movie", edit_movie_path(@movie) %> |
+  <%= link_to "Delete Movie", movie_path(@movie), method: :delete, data: { confirm: "Are you sure?" } %>
+</p>

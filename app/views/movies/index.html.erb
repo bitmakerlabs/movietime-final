@@ -1,0 +1,12 @@
+<% @movies.each do |movie| %>
+
+  <p>
+    <%= image_tag movie.image.thumb.url %>
+    <a href="/movies/<%= movie.id %>"><%= movie.title %></a>
+  </p>
+
+<% end %>
+
+<p>
+  <%= link_to "Create New Movie", new_movie_path %>
+</p>

@@ -1,0 +1,11 @@
+<%= "Session User ID: #{session[:user_id]}" %>
+
+<% @genres.each do |genre| %>
+  <p><a href="/genres/<%= genre.id %>"><%= genre.name %></a></p>
+<% end %>
+
+<% if current_user %>
+  <p>
+    <%= link_to "Create New Genre", new_genre_path %>
+  </p>
+<% end %>
